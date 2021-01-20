@@ -9,6 +9,7 @@ namespace TimeComplexity
     {
         static void Main()
         {
+            //Change array element counts when you want to check big O!
             int[] array = new int[100000];
             int[] array2 = new int[100000];
             Sum(array);
