@@ -9,9 +9,11 @@ namespace TimeComplexity
     {
         static void Main()
         {
-            //Change array element counts when you want to check big O!
-            int[] array = new int[100000];
-            int[] array2 = new int[100000];
+            /*Change array element counts when you want to check big O!
+             * Do not exceed 40000 to avoid out of memory exception!*/
+            int[] array = new int[40000];
+            int[] array2 = new int[40000];
+
             Sum(array);
             Find(array, 2);
             Contains(array, 5);
@@ -119,11 +121,11 @@ namespace TimeComplexity
         }
 
         //Matching: O(n2)
-        private static List<long> Matching(int[] array, int[] array2)
+        private static List<int> Matching(int[] array, int[] array2)
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            List<long> matchingElements = new();
+            List<int> matchingElements = new();
             foreach(int i in array)
             {
                 foreach(int n in array2)
